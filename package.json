@@ -1,0 +1,23 @@
+{
+  "name": "sads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menglin1997/sads.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menglin1997/sads/issues"
+  },
+  "homepage": "https://github.com/menglin1997/sads#readme",
+  "dependencies": {
+    "vconsole": "^3.3.4"
+  }
+}

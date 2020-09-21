@@ -4,7 +4,7 @@
  * @Author: zml
  * @Date: 2020-09-21 14:12:08
  * @LastEditors: zml
- * @LastEditTime: 2020-09-21 17:34:45
+ * @LastEditTime: 2020-09-21 17:38:55
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +46,7 @@ a {
         /* margin: 20px; */
     }
 </style>
+<script src="./vconsole.min.js"></script>
 <body>
 
     <!-- <h1>测试环境</h1> -->
@@ -69,11 +70,13 @@ a {
             <a href="https://www.foodstp.com/app/release/student/student.apk">学员端</a>
     </div> -->
     <script>
+        vConsole.ready(function() {
+	console.log('Hello World');
+});
         // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
     // let img = document.getElementById('img')
     // img.style.display = 'none'
 
-    if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
         var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
         //在微信中打开
@@ -82,7 +85,7 @@ a {
 
         } else {
             // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
-        }}
+        }
     // if (ua.match(/WeiBo/i) == "weibo") {
     // //在新浪微博客户端打开
     // }
