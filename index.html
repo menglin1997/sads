@@ -4,7 +4,7 @@
  * @Author: zml
  * @Date: 2020-09-21 14:12:08
  * @LastEditors: zml
- * @LastEditTime: 2020-09-21 17:50:16
+ * @LastEditTime: 2020-09-21 17:52:07
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -92,12 +92,12 @@ a {
         console.log(ua,'ua')
         console.log(ua.match(/MicroMessenger/i) ,'ua.match(/MicroMessenger/i) ')
 
-        if (ua.match(/MicroMessenger/i) == "micromessenger") {
-        //在微信中打开
-        mask.style.display = 'block'
-            alert('微信')
-
+        if (ua.match(/MicroMessenger/i)[0] == "micromessenger") {
+            //在微信中打开
+            mask.style.display = 'block'
         } else {
+            // mask.style.display = 'block'
+
             // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
         }
     // if (ua.match(/WeiBo/i) == "weibo") {
