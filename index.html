@@ -4,7 +4,7 @@
  * @Author: zml
  * @Date: 2020-09-21 14:12:08
  * @LastEditors: zml
- * @LastEditTime: 2020-09-21 17:38:55
+ * @LastEditTime: 2020-09-21 17:40:29
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -70,14 +70,14 @@ a {
             <a href="https://www.foodstp.com/app/release/student/student.apk">学员端</a>
     </div> -->
     <script>
-        vConsole.ready(function() {
-	console.log('Hello World');
-});
+ var vConsole = new VConsole();
         // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
     // let img = document.getElementById('img')
     // img.style.display = 'none'
 
         var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        console.log(ua,'ua')
+        console.log(ua.match(/MicroMessenger/i) ,'ua.match(/MicroMessenger/i) ')
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
         //在微信中打开
         // img.style.display = 'block'
