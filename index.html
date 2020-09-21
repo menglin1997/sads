@@ -4,7 +4,7 @@
  * @Author: zml
  * @Date: 2020-09-21 14:12:08
  * @LastEditors: zml
- * @LastEditTime: 2020-09-21 17:10:13
+ * @LastEditTime: 2020-09-21 17:34:45
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -73,16 +73,16 @@ a {
     // let img = document.getElementById('img')
     // img.style.display = 'none'
 
-    // if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
-    //     var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-    //     if (ua.match(/MicroMessenger/i) == "micromessenger") {
-    //     //在微信中打开
-    //     // img.style.display = 'block'
-    //     // alert('微信')
+    if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        //在微信中打开
+        // img.style.display = 'block'
+        alert('微信')
 
-    //     } else {
-    //         // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
-    //     }}
+        } else {
+            // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
+        }}
     // if (ua.match(/WeiBo/i) == "weibo") {
     // //在新浪微博客户端打开
     // }
