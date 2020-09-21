@@ -4,7 +4,7 @@
  * @Author: zml
  * @Date: 2020-09-21 14:12:08
  * @LastEditors: zml
- * @LastEditTime: 2020-09-21 17:43:58
+ * @LastEditTime: 2020-09-21 17:50:16
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,16 @@ a {
         color: #fff;
         /* margin: 20px; */
     }
+    .mask {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+        background: rgba(0,0,0,.5);
+    }
+    .mask img {
+        width: 100%;
+    }
 </style>
 <script src="./vconsole.min.js"></script>
 <body>
@@ -62,7 +72,10 @@ a {
             <a href="https://www.foodstp.com/app/teacher/teacher.apk">老师端</a>
             <a href="https://www.foodstp.com/app/student/student.apk">学员端</a> -->
     </div>
-    
+    <!-- 蒙版 -->
+    <div class="mask" id="mask">
+<img src="./open.jpg" alt="">
+    </div>
     <!-- <h1>正式环境</h1>
     <div id="img">
             <a href="https://www.foodstp.com/app/release/agent/agent.apk">代理商端</a>
@@ -72,18 +85,17 @@ a {
     <script>
  var vConsole = new VConsole();
         // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
-    // let img = document.getElementById('img')
-    // img.style.display = 'none'
+    let mask = document.getElementById('mask')
+    mask.style.display = 'none'
 
         var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
         console.log(ua,'ua')
         console.log(ua.match(/MicroMessenger/i) ,'ua.match(/MicroMessenger/i) ')
-        alert('微信',JSON.stringify(ua))
 
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
         //在微信中打开
-        // img.style.display = 'block'
-        alert('微信')
+        mask.style.display = 'block'
+            alert('微信')
 
         } else {
             // window.location.href = 'https://www.foodstp.com/app/agent/agent.apk'
